@@ -1,0 +1,33 @@
+/* Style Section */
+
+* {
+    box-sizing: border-box;
+}
+
+i {
+    color: white;
+}
+
+header {
+    background: rgb(rgb(5, 5, 5);
+}
+
+main {
+    margin: 20px;
+    width: auto;
+}
+
+#submitBtn {
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 5px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    background-color: rgba(rgba(0, 4, 255, 0.938);
+    box-shadow: 2px 2px black;
+}
+
