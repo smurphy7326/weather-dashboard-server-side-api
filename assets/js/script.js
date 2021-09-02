@@ -25,3 +25,33 @@ dayFiveForecast = [document.getElementById('dayFive'), document.getElementById('
 // Storage for search history
 var cityNameStorageList = JSON.parse(localStorage.getItem('cityName')) || [];
 
+// Search History
+function getHistoryList() {
+    historyList.innerHTML = "";
+    JSON.stringify(localStorage.getItem('cityName'));
+    let i = 0;
+    this.getHistoryList.forEach(function(i) {
+        historyList.innerHTML += '<button class="list-item btn" type="submit" value="' + i + '">' + i + '</button>'
+        });
+    const btnListing = document.querySelectorAll('.list-item');
+    btnListing.forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            var cityInput = document.getElementById(cityName);
+            cityInput.value = this.value;       // Ask BCS Helped with this part
+            currentWeather.style.display = "";
+            fetchRequest(); // fetch request was learned aboput in lesson 6
+        })
+    });
+};
+
+getHistoryList();
+
+// function to clear the history in the browser
+// Clear button not required but useful
+
+function clearHistory() {
+    localStorage.clear();
+    location.reload();
+};
+
