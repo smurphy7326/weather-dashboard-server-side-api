@@ -15,3 +15,9 @@
 * Updated the style to incorperate some of the changes to the HTML
 * Added a few variables to the javascript
 * Updated the README
+
+### Version 1,3 - 
+* Updated the READme
+* Updated the HTML with the correct names in the five day forcast
+* Updated the CSS to include cards and card bodies
+* Updated on javascript for the card section
