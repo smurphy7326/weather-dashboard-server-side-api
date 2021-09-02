@@ -59,7 +59,7 @@ function clearHistory() {
 
 submitBtn.addEventListener('click', function(event) {
     event.preventDefault();
-    var cityInput = document.getElementById('cityname').value;
+    var cityInput = document.getElementById('cityName').value;
     if(cityInput === '') {
         alert("Please Enter City Name")
     } else {
@@ -74,7 +74,7 @@ const listBtn = document.querySelectorAll('.list-item');
     listBtn.forEach(function(element) {
         element.addEventListener('click', function(event) {
             event.preventDefault();
-            var cityInput = document.getElementById('cityname').value;
+            var cityInput = document.getElementById('cityName').value;
             cityInput.value = this.value;
             weatherCol.style.display = '';
             fetchRequest();
@@ -83,3 +83,48 @@ const listBtn = document.querySelectorAll('.list-item');
 
 // Fetch request to openweather for the cards
 
+function fetchRequest() {
+    var cityInput = document.getElementById(cityName).value;
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + '&appid=' + apiKey)
+    .then(function(lonlatresponse){
+        if(lonlatresponse.ok) {
+        cityNameStorageList();
+        return lonlatresponse.json()
+        } else {
+            alert('Error:' + lonlatresponse.statusText);
+        }
+    }
+    )
+    .then(function(lonlatresponse) {
+        var currentLon = lonlatresponse.coord.lon;
+        var currentLat = lonlatresponse.coord.lat;
+        return fetch('https://api.openweathermap.org.data/2.5/onecall?lat=' + currentLat + '&lon' + currentLon + '&units=imperial' + '&appid=' + apiKey)
+    })
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(response){
+        // calling on the information to allow it to be displayed 
+        var currentDate = parseInt(response.current.dt);
+        var currentIcon = response.current.weahter[0].icon;
+        var currentTemp = response.current.temp;
+        var currentWind = response.current.wind_speed;
+        var currentHumid = response.current.humidity;
+        var currentUV = response.current.uvi;
+
+        var forcastingData = [
+            dayOneForecastingData = [reponse.daily[0].dt, response.daily[0].weather[0].icon, response.daily[0].temp.day, response.daily[0].windSpeed, response.daily[0].humidity],
+
+            dayTwoForecastingData = [reponse.daily[1].dt, response.daily[1].weather[0].icon, response.daily[1].temp.day, response.daily[1].windSpeed, response.daily[1].humidity],
+
+            dayThreeForecastingData = [reponse.daily[2].dt, response.daily[2].weather[0].icon, response.daily[2].temp.day, response.daily[2].windSpeed, response.daily[2].humidity],
+
+            dayFourForecastingData = [reponse.daily[3].dt, response.daily[3].weather[0].icon, response.daily[3].temp.day, response.daily[3].windSpeed, response.daily[3].humidity],
+
+            dayFiveForecastingData = [reponse.daily[4].dt, response.daily[4].weather[0].icon, response.daily[4].temp.day, response.daily[4].windSpeed, response.daily[4].humidity]];
+        
+            //Current Day
+
+            
+    })
+}

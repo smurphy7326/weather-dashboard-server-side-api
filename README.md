@@ -30,4 +30,8 @@
 * Submit Button Request
 * Updated the README
 
-### Version 1,6 - 
+### Version 1.6 - Latitude and longitude
+* Changed up the javascript to make it specific to cities
+* Updated the README
+
+###
