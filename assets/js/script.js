@@ -5,6 +5,7 @@ const submitBtn = document.getElementById('submitBtn');
 const historyList = document.getElementById('historyContainer');
 const currentWeather = document.getElementById('currentWeather');
 currentWeather.style.display = 'none';
+const cityNameDateEl = document.getElementById('cityNameDate');
 const cityIconEl = document.getElementById('cityIcon');
 const cityTemperature = document.getElementById('cityTemperature');
 const cityWind = document.getElementById('cityWind');
@@ -123,8 +124,28 @@ function fetchRequest() {
 
             dayFiveForecastingData = [reponse.daily[4].dt, response.daily[4].weather[0].icon, response.daily[4].temp.day, response.daily[4].windSpeed, response.daily[4].humidity]];
         
-            //Current Day
+//Current Day
 
-            
+// Ask BCS helped with this part
+    
+    cityNameDateEl.innerHTML = cityInput + ' ' + moment.unix(currentDate).format('M/D/YYYY') + '<img id="cityIcon" src="https://openweathermap.org/img/wn/' + currentIcon + '@2x.png"></img>';
+    cityTemperature.innnerHTML = "Temp: " + currentTemp + "˚F";
+    cityWind.innerHTML = 'Wind: ' + currentWind + 'MPH';
+    cityHumid.innerHTML = 'Humidity: ' + currentHumid + '%';
+    cityUV.innerHTML = 'UV Index: ' + currentUV;
+            if (currentUV <= 2) {
+                cityUV.className = 'UVGreen';
+            }
+            if (currentUV > 2 && currentUV <= 5) {
+                cityUV.className = 'UVYellow';
+            }
+            if (currentUV > 5 && currentUV <= 7) {
+                cityUV.className = 'UVRed';
+            }
+            if (currentUV > 10) {
+                cityUV.className = 'UVPurple';
+            }
+
+
     })
 }

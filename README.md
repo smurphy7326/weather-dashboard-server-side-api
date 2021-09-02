@@ -40,4 +40,7 @@
 * Working on making the webpage fill in with color
 * updated the README.md
 
-### Version 1.8 - 
+### Version 1.8 - UV Index
+* Added to the five day forecast style
+* Updated the UV Index in Javascript
+* Updated the README
