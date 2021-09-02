@@ -34,4 +34,10 @@
 * Changed up the javascript to make it specific to cities
 * Updated the README
 
-###
+### Version 1.7 - Color
+* Updated the body in CSS
+* Fixed the errors in CSS
+* Working on making the webpage fill in with color
+* updated the README.md
+
+### Version 1.8 - 
