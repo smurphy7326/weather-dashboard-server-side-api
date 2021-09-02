@@ -146,6 +146,21 @@ function fetchRequest() {
                 cityUV.className = 'UVPurple';
             }
 
-
+// Five Day Forecast 
+            dayForecast.forEach((element, i) => {
+                const day = forecastData[i];
+                dayForecast[i][0].innerHTML = moment.unix(day[0]).format('M/D/YYYY');
+                dayForecast[i][1].setAttribute('src', 'https://openweathermap.org/img/wn/' + day[1] + '@2x.png')
+                dayForecast[i][2].innerHTML = 'Temp: ' + day[2] + '˚F';
+                dayForecast[i][3].innerHTML = 'Wind: ' + day[3] + 'MPH';
+                dayForecast[i][4].innerHTML - 'Humidity: ' + day[4] + '%';
+            })
     })
-}
+};
+
+function cityNameStorageList() {
+    var cityInput = document.getElementById('cityname').value;
+    cityNameStorageArr.push(cityInput);
+    localStorage.setItem('citynames', JSON.stringify(cityNameStorageArr));
+    renderHistoryList();
+};
