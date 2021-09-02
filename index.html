@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <!-- Links from class -->
+    <!-- Links from class Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css">
@@ -19,13 +19,13 @@
 
     <main>
         <div class="flex-row">
-            <div class="col md-3" id="searchbar">
+            <div class="col md-4" id="searchbar">
                 <div class="card">
                     <!-- Bootstrap help -->
-                    <h2 class=card-header>Search for a City:</h2>
+                    <h2 class="card-header text-uppercase">Search for a City:</h2>
                     <form id="formCities" class="card-body">
-                        <input name="cityName" id="cityName" type="text" class="form-input" placeholder="City" />
-                        <button id="submitBtn" type="submnit" class="btn">Search</button>
+                        <input name="cityName" id="cityName" type="text" class="form-input" placeholder="Enter a city name for the Weather!" />
+                        <button id="submitBtn" type="submit" class="btn">Submit</button>
                     </form>
                 </div>
 
@@ -33,9 +33,10 @@
                 <button onclick="clearHistory()" class="btn">Clear Search History</button>
             </div>
 
+            <!-- Bootstrap help with templates -->
             <div class="col-12 col-md-8" id="currentWeather">
                 <div class="containerWeather">
-                    <h3 id="nameCity"><img id="cityIcon" src=""></img></h3> <!-- Bootstrap -->
+                    <h3 id="cityNameDate"><img id="cityIcon" src=""></img></h3> <!-- Bootstrap -->
                     <ul>
                         <li id="cityTemperature"></li>
                         <li id="cityWind"></li>
@@ -48,7 +49,7 @@
 
                 <div class="row">
                 <div class="col fiveDayForecast" id="firstDay">
-                    <h5 id="dayOne"></h5>
+                    <h5 id="dayOneWeather"></h5>
                     <img src="" id="dayOneIcon"></img>
                     <ul>
                         <li id="dayOneTemperature"></li>
@@ -57,31 +58,34 @@
                     </ul>
                 </div>
                 <div class="col fiveDayForecast" id="secondDay">
-                    <h5 id="dayTwo"></h5>
+                    <h5 id="dayTwoWeather"></h5>
                     <img src="" id="dayTwoIcon"></img>
                     <ul>
                         <li id="dayTwoTemperature"></li>
                         <li id="dayTwoWind"></li>
                         <li id="dayTwoHumidity"></li>
                     </ul>
-                </div><div class="col fiveDayForecast" id="thirdDay">
-                    <h5 id="dayThree"></h5>
+                </div>
+                <div class="col fiveDayForecast" id="thirdDay">
+                    <h5 id="dayThreeWeather"></h5>
                     <img src="" id="dayThreeIcon"></img>
                     <ul>
                         <li id="dayThreeTemperature"></li>
                         <li id="dayThreeWind"></li>
                         <li id="dayThreeHumidity"></li>
                     </ul>
-                </div><div class="col fiveDayForecast" id="fourthDay">
-                    <h5 id="dayFour"></h5>
-                    <img src="" id="dayFourIcon"></img>
+                </div>
+                <div class="col fiveDayForecast" id="fourthDay">
+                    <h5 id="dayFourWeather"></h5>
+                    <id="dayFourIcon"></img>
                     <ul>
                         <li id="dayFourTemperature"></li>
                         <li id="dayFourWind"></li>
                         <li id="dayFourHumidity"></li>
                     </ul>
-                </div><div class="col fiveDayForecast" id="fifthDay">
-                    <h5 id="dayFive"></h5>
+                </div>
+                <div class="col fiveDayForecast" id="fifthDay">
+                    <h5 id="dayFiveWeather"></h5>
                     <img src="" id="dayFiveIcon"></img>
                     <ul>
                         <li id="dayFiveTemperature"></li>
@@ -94,10 +98,12 @@
         </div>
     </main>
 
-    <!-- More Scourses-->
+    <!-- More Sources from class -->
+    <!-- Also get Bootstrap 4.1 getting started is a useful website for help -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> <!-- Code help from class -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

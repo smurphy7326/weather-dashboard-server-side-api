@@ -1,15 +1,15 @@
 // javascript section
 
-const apiKey = '93d8043af196220c5f35d380f7c697f4'; // Openweather API Key
+const apiKey = '0a5ea24ba2753ed94588e70528660e8a'; // Openweather API Key Default Key made when signed up for an account
 const submitBtn = document.getElementById('submitBtn');
 const historyList = document.getElementById('historyContainer');
-const currentWeather = document.getElementById('currentWeather');
+const weatherCol = document.getElementById('weatherCol');
 currentWeather.style.display = 'none';
 const cityNameDateEl = document.getElementById('cityNameDate');
 const cityIconEl = document.getElementById('cityIcon');
 const cityTemperature = document.getElementById('cityTemperature');
 const cityWind = document.getElementById('cityWind');
-const cityHumid = document.getElementById('cityHumid');
+const cityHumidity = document.getElementById('cityHumidity');
 const cityUV = document.getElementById('cityUV');
 
 var dayForecast = [

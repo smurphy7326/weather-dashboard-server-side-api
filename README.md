@@ -44,3 +44,7 @@
 * Added to the five day forecast style
 * Updated the UV Index in Javascript
 * Updated the README
+
+### Version 1.9 - 
+* Streamlined the HTML
+* Updated the README
