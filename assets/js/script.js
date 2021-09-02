@@ -55,3 +55,31 @@ function clearHistory() {
     location.reload();
 };
 
+// submit button event 
+
+submitBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    var cityInput = document.getElementById('cityname').value;
+    if(cityInput === '') {
+        alert("Please Enter City Name")
+    } else {
+        weatherCol.style.display = '';
+        fetchRequest();
+    }
+});
+
+
+// List Button
+const listBtn = document.querySelectorAll('.list-item');
+    listBtn.forEach(function(element) {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            var cityInput = document.getElementById('cityname').value;
+            cityInput.value = this.value;
+            weatherCol.style.display = '';
+            fetchRequest();
+        })
+    });
+
+// Fetch request to openweather for the cards
+

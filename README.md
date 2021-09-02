@@ -26,4 +26,8 @@
 * Javascript for the clear button
 * Javascript for the search history in the HTML
 
-### Version 1.5 - 
+### Version 1.5 - Submit Buttom
+* Submit Button Request
+* Updated the README
+
+### Version 1,6 - 
