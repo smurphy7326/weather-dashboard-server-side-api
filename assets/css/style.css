@@ -11,7 +11,6 @@ body {
     font-size: medium;
     color: white;
     text-align: center;
-    background-color: black;
 }
 
 
@@ -68,7 +67,6 @@ h6 {
 
 
 .card {
-    margin: 0 0 20px 0;
     border: 3px black solid;
     border-bottom: 5px;
     border-radius: 3px;
@@ -88,9 +86,8 @@ h6 {
 
 #submitBtn {
     font-size: 1.2rem;
-    text-decoration: none;
     padding: 5px 5px;
-    width: 100%;
+    width: 90%;
     display: block;
     margin: 5px 0 5px 0;
     border-radius: 5px;
@@ -103,7 +100,6 @@ h6 {
 #submitBtn:hover {
     color: black;
     background-color: rgb(0, 81, 255);
-    transform: translate(0, 0);
     box-shadow: 2px 2px black;
 }
 

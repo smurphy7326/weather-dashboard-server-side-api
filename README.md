@@ -45,6 +45,8 @@
 * Updated the UV Index in Javascript
 * Updated the README
 
-### Version 1.9 - 
+### Version 1.9 - Streamline HTML
 * Streamlined the HTML
 * Updated the README
+
+### Version 1.10 - 
